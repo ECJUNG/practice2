@@ -36,8 +36,6 @@ function addTask(){
 }
 
 function filter(event) {
-    console.log(event);
-    console.log(event.target);
     mode = event.target.id;
     filterList = [];
 
@@ -68,7 +66,6 @@ function filter(event) {
         }
         render();
     }
-    console.log(filterList);
 }
 
 function render(){
@@ -105,7 +102,6 @@ function render(){
 }
 
 function toggleComplete(id) {
-    console.log("id:",id);
     for(let i=0;i<taskList.length;i++){
         if(taskList[i].id == id){
             taskList[i].isComplete = !taskList[i].isComplete;
@@ -116,7 +112,6 @@ function toggleComplete(id) {
 }
 
 function toggleDelete(id) {
-    console.log("Delete id:",id);
     for(let i=0; i<taskList.length; i++){
         if(taskList[i].id == id){
             taskList.splice(i,1)

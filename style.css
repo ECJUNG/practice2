@@ -1,3 +1,10 @@
+@media (min-width: 992px){
+    .container{
+        background-size: contain; /* 자기 원래 사이즈 지켜라 */    
+        height: 717px;
+        padding-top: 0;
+    }
+
 body {
     margin: 0;
     background-image: url("images/IMG_0272.jpeg");
@@ -56,4 +63,5 @@ h1 {
 
 .task-tabs div{
     cursor:pointer
+}
 }
