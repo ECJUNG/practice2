@@ -40,13 +40,14 @@ h1 {
 }
 
 #under-line{
-    height: 4px;
+    height: 4px !important;
     background-color: red;
     position: absolute;
     width: 70px;
     left: 0px;
     top: 48px;
     padding: 0px;
+    transition: 0.5s;
 }
 
 .task-done{

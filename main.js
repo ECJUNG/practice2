@@ -14,6 +14,8 @@
 let taskInput = document.getElementById("task-input");
 let addButton = document.getElementById("add-button");
 let tabs = document.querySelectorAll(".task-tabs div");
+let underLine = document.getElementById("under-line");
+
 let taskList = [];
 let filterList = [];
 let mode ="all";
@@ -29,14 +31,26 @@ function addTask(){
         isComplete:false,
     };
     taskList.push(task);
+    taskInput.value = "";
     render();
 }
 
 function filter(event) {
+    console.log(event);
+    console.log(event.target);
     mode = event.target.id;
-    console.log(mode);
     filterList = [];
 
+    if(event){
+    underLine.style.width =
+        event.target.offsetWidth + "px";
+    underLine.style.top =
+        event.target.offsetTop + (event.target.offsetHeight - 4) + "px";
+    underLine.style.left =
+        event.target.offsetLeft + "px";    
+
+    }
+    
     if(mode == "all"){
         render()
     }else if(mode == "ongoing"){
